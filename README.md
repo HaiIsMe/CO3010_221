@@ -1,1 +1,3 @@
-# CO3010_221
+This is my labotary at Microprocessor-Microcontroller 
+
+In Lab1
