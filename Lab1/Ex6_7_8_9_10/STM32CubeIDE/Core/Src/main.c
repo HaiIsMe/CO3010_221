@@ -1,3 +1,4 @@
+//APPROVED 27/10/2022
 /* USER CODE BEGIN Header */
 /**
  ******************************************************************************
@@ -54,8 +55,6 @@ static void MX_GPIO_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
-//Ex7
 void clearAllClock()
 {
   HAL_GPIO_WritePin(L0_GPIO_Port, L0_Pin, GPIO_PIN_SET);
@@ -71,141 +70,94 @@ void clearAllClock()
   HAL_GPIO_WritePin(L10_GPIO_Port, L10_Pin, GPIO_PIN_SET);
   HAL_GPIO_WritePin(L11_GPIO_Port, L11_Pin, GPIO_PIN_SET);
 }
-
-//Ex8
-void setNumberOnBlock(int num)
-{
-  switch (num)
-  {
-  case 0:
-  {
-    HAL_GPIO_WritePin(L0_GPIO_Port, L0_Pin, GPIO_PIN_RESET);
-    break;
-  }
-  case 1:
-  {
-    HAL_GPIO_WritePin(L1_GPIO_Port, L1_Pin, GPIO_PIN_RESET);
-    break;
-  }
-  case 2:
-  {
-    HAL_GPIO_WritePin(L2_GPIO_Port, L2_Pin, GPIO_PIN_RESET);
-    break;
-  }
-  case 3:
-  {
-    HAL_GPIO_WritePin(L3_GPIO_Port, L3_Pin, GPIO_PIN_RESET);
-    break;
-  }
-  case 4:
-  {
-    HAL_GPIO_WritePin(L4_GPIO_Port, L4_Pin, GPIO_PIN_RESET);
-    break;
-  }
-  case 5:
-  {
-    HAL_GPIO_WritePin(L5_GPIO_Port, L5_Pin, GPIO_PIN_RESET);
-    break;
-  }
-  case 6:
-  {
-    HAL_GPIO_WritePin(L6_GPIO_Port, L6_Pin, GPIO_PIN_RESET);
-    break;
-  }
-  case 7:
-  {
-    HAL_GPIO_WritePin(L7_GPIO_Port, L7_Pin, GPIO_PIN_RESET);
-    break;
-  }
-  case 8:
-  {
-    HAL_GPIO_WritePin(L8_GPIO_Port, L8_Pin, GPIO_PIN_RESET);
-    break;
-  }
-  case 9:
-  {
-    HAL_GPIO_WritePin(L9_GPIO_Port, L9_Pin, GPIO_PIN_RESET);
-    break;
-  }
-  case 10:
-  {
-    HAL_GPIO_WritePin(L10_GPIO_Port, L10_Pin, GPIO_PIN_RESET);
-    break;
-  }
-  default:
-    HAL_GPIO_WritePin(L11_GPIO_Port, L11_Pin, GPIO_PIN_RESET);
-  }
-}
-
-//Ex9
 void clearNumberOnBlock(int num)
 {
   switch (num)
   {
   case 0:
-  {
     HAL_GPIO_WritePin(L0_GPIO_Port, L0_Pin, GPIO_PIN_SET);
     break;
-  }
   case 1:
-  {
     HAL_GPIO_WritePin(L1_GPIO_Port, L1_Pin, GPIO_PIN_SET);
     break;
-  }
   case 2:
-  {
     HAL_GPIO_WritePin(L2_GPIO_Port, L2_Pin, GPIO_PIN_SET);
     break;
-  }
   case 3:
-  {
     HAL_GPIO_WritePin(L3_GPIO_Port, L3_Pin, GPIO_PIN_SET);
     break;
-  }
   case 4:
-  {
     HAL_GPIO_WritePin(L4_GPIO_Port, L4_Pin, GPIO_PIN_SET);
     break;
-  }
   case 5:
-  {
     HAL_GPIO_WritePin(L5_GPIO_Port, L5_Pin, GPIO_PIN_SET);
     break;
-  }
   case 6:
-  {
     HAL_GPIO_WritePin(L6_GPIO_Port, L6_Pin, GPIO_PIN_SET);
     break;
-  }
   case 7:
-  {
     HAL_GPIO_WritePin(L7_GPIO_Port, L7_Pin, GPIO_PIN_SET);
     break;
-  }
   case 8:
-  {
     HAL_GPIO_WritePin(L8_GPIO_Port, L8_Pin, GPIO_PIN_SET);
     break;
-  }
   case 9:
-  {
     HAL_GPIO_WritePin(L9_GPIO_Port, L9_Pin, GPIO_PIN_SET);
     break;
-  }
   case 10:
-  {
     HAL_GPIO_WritePin(L10_GPIO_Port, L10_Pin, GPIO_PIN_SET);
     break;
-  }
   default:
     HAL_GPIO_WritePin(L11_GPIO_Port, L11_Pin, GPIO_PIN_SET);
   }
 }
-
-//Ex6
-void test(int num) {
+void setNumberOnBlock(int num)
+{
+  switch (num)
+  {
+  case 0:
+    HAL_GPIO_WritePin(L0_GPIO_Port, L0_Pin, GPIO_PIN_RESET);
+    break;
+  case 1:
+    HAL_GPIO_WritePin(L1_GPIO_Port, L1_Pin, GPIO_PIN_RESET);
+    break;
+  case 2:
+    HAL_GPIO_WritePin(L2_GPIO_Port, L2_Pin, GPIO_PIN_RESET);
+    break;
+  case 3:
+    HAL_GPIO_WritePin(L3_GPIO_Port, L3_Pin, GPIO_PIN_RESET);
+    break;
+  case 4:
+    HAL_GPIO_WritePin(L4_GPIO_Port, L4_Pin, GPIO_PIN_RESET);
+    break;
+  case 5:
+    HAL_GPIO_WritePin(L5_GPIO_Port, L5_Pin, GPIO_PIN_RESET);
+    break;
+  case 6:
+    HAL_GPIO_WritePin(L6_GPIO_Port, L6_Pin, GPIO_PIN_RESET);
+    break;
+  case 7:
+    HAL_GPIO_WritePin(L7_GPIO_Port, L7_Pin, GPIO_PIN_RESET);
+    break;
+  case 8:
+    HAL_GPIO_WritePin(L8_GPIO_Port, L8_Pin, GPIO_PIN_RESET);
+    break;
+  case 9:
+    HAL_GPIO_WritePin(L9_GPIO_Port, L9_Pin, GPIO_PIN_RESET);
+    break;
+  case 10:
+    HAL_GPIO_WritePin(L10_GPIO_Port, L10_Pin, GPIO_PIN_RESET);
+    break;
+  default:
+    HAL_GPIO_WritePin(L11_GPIO_Port, L11_Pin, GPIO_PIN_RESET);
+  }
+}
+void setTime(int sec, int min, int hou)
+{
   clearAllClock();
-  setNumberOnBlock(num);
+  setNumberOnBlock(sec);
+  setNumberOnBlock(min);
+  setNumberOnBlock(hou);
 }
 /* USER CODE END 0 */
 
@@ -248,7 +200,6 @@ int main(void)
   int hou = 0;
   while (1)
   {
-    /* USER CODE END WHILE */
     sec++;
     if (sec >= 12)
     {
@@ -264,14 +215,13 @@ int main(void)
     {
       hou = 0;
     }
+    // setTime(sec,min,hou);
     clearAllClock();
     setNumberOnBlock(sec);
     setNumberOnBlock(min);
     setNumberOnBlock(hou);
     HAL_Delay(1000);
-    /* USER CODE BEGIN 3 */
   }
-  /* USER CODE END 3 */
 }
 
 /**
