@@ -97,12 +97,10 @@ int main(void)
   {
     if (status == 0)
     {
-      // TODO: RED0->On
       HAL_GPIO_WritePin(R0_GPIO_Port, R0_Pin, GPIO_PIN_RESET);
       HAL_GPIO_WritePin(R1_GPIO_Port, R1_Pin, GPIO_PIN_SET);
       HAL_GPIO_WritePin(Y0_GPIO_Port, Y0_Pin, GPIO_PIN_SET);
       HAL_GPIO_WritePin(G0_GPIO_Port, G0_Pin, GPIO_PIN_SET);
-      // TODO: from 0->2: GREEN1->On, from 3->4: YELLOW1->On
       if (count > 3)
       {
         HAL_GPIO_WritePin(Y1_GPIO_Port, Y1_Pin, GPIO_PIN_RESET);
@@ -116,12 +114,10 @@ int main(void)
     }
     else
     {
-      // TODO: RED1->On
       HAL_GPIO_WritePin(R0_GPIO_Port, R0_Pin, GPIO_PIN_SET);
       HAL_GPIO_WritePin(R1_GPIO_Port, R1_Pin, GPIO_PIN_RESET);
       HAL_GPIO_WritePin(Y1_GPIO_Port, Y1_Pin, GPIO_PIN_SET);
       HAL_GPIO_WritePin(G1_GPIO_Port, G1_Pin, GPIO_PIN_SET);
-      // TODO: from 0->2: GREEN0->On, from 3->4: YELLOW0->On
       if (count > 3)
       {
         HAL_GPIO_WritePin(Y0_GPIO_Port, Y0_Pin, GPIO_PIN_RESET);
@@ -140,9 +136,7 @@ int main(void)
       status = !status;
     }
     HAL_Delay(1000);
-    /* USER CODE BEGIN 3 */
   }
-  /* USER CODE END 3 */
 }
 
 /**

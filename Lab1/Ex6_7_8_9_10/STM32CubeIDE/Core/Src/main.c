@@ -152,13 +152,13 @@ void setNumberOnBlock(int num)
     HAL_GPIO_WritePin(L11_GPIO_Port, L11_Pin, GPIO_PIN_RESET);
   }
 }
-void setTime(int sec, int min, int hou)
-{
-  clearAllClock();
-  setNumberOnBlock(sec);
-  setNumberOnBlock(min);
-  setNumberOnBlock(hou);
-}
+// void setTime(int sec, int min, int hou)
+// {
+//   clearAllClock();
+//   setNumberOnBlock(sec);
+//   setNumberOnBlock(min);
+//   setNumberOnBlock(hou);
+// }
 /* USER CODE END 0 */
 
 /**
@@ -195,6 +195,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  
   int sec = -1;
   int min = 0;
   int hou = 0;
@@ -215,13 +216,37 @@ int main(void)
     {
       hou = 0;
     }
-    // setTime(sec,min,hou);
     clearAllClock();
     setNumberOnBlock(sec);
     setNumberOnBlock(min);
     setNumberOnBlock(hou);
     HAL_Delay(1000);
   }
+  //Lab6, test each single led
+	// HAL_GPIO_TogglePin(L1_GPIO_Port, L1_Pin);
+	// HAL_Delay(1000);
+	// HAL_GPIO_TogglePin(L2_GPIO_Port, L2_Pin);
+	// HAL_Delay(1000);
+	// HAL_GPIO_TogglePin(L3_GPIO_Port, L3_Pin);
+	// HAL_Delay(1000);
+	// HAL_GPIO_TogglePin(L4_GPIO_Port, L4_Pin);
+	// HAL_Delay(1000);
+	// HAL_GPIO_TogglePin(L5_GPIO_Port, L5_Pin);
+	// HAL_Delay(1000);
+	// HAL_GPIO_TogglePin(L6_GPIO_Port, L6_Pin);
+	// HAL_Delay(1000);
+	// HAL_GPIO_TogglePin(L7_GPIO_Port, L7_Pin);
+	// HAL_Delay(1000);
+	// HAL_GPIO_TogglePin(L8_GPIO_Port, L8_Pin);
+	// HAL_Delay(1000);
+	// HAL_GPIO_TogglePin(L9_GPIO_Port, L9_Pin);
+	// HAL_Delay(1000);
+	// HAL_GPIO_TogglePin(L10_GPIO_Port, L10_Pin);
+	// HAL_Delay(1000);
+	// HAL_GPIO_TogglePin(L11_GPIO_Port, L11_Pin);
+	// HAL_Delay(1000);
+	// HAL_GPIO_TogglePin(L12_GPIO_Port, L12_Pin);
+	// HAL_Delay(1000);
 }
 
 /**

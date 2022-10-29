@@ -95,16 +95,13 @@ int main(void)
 
   while (1)
   {
-    /* USER CODE END WHILE */
     switch (status)
     {
     case 0:
-      // TODO: YELLOW->On
       HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_SET);
       HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_RESET);
       break;
     case 1:
-      // TODO: RED->On
       HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_RESET);
       HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_SET);
       break;
@@ -118,9 +115,7 @@ int main(void)
       status = !status;
     }
     HAL_Delay(1000);
-    /* USER CODE BEGIN 3 */
   }
-  /* USER CODE END 3 */
 }
 
 /**

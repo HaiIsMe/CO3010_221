@@ -99,19 +99,16 @@ int main(void)
         switch (status)
         {
         case 0:
-            // TODO: RED->On
             HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_RESET);
             HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_SET);
             HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_SET);
             break;
         case 1:
-            // TODO: YELLOW->On
             HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_SET);
             HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_RESET);
             HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_SET);
             break;
         case 2:
-            // TODO: GREEN->On
             HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_SET);
             HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_SET);
             HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_RESET);
@@ -125,17 +122,14 @@ int main(void)
             switch (status)
             {
             case 0:
-                //TODO: Turn on GREEN in 3s
                 status = 2; 
                 count = 3;
                 break;
             case 1:
-                //TODO: Turn on RED in 5s
                 status = 0;
                 count = 5;
                 break;
             case 2:
-                //TODO: Turn on YELLOW in 2s
                 status = 1;
                 count = 2;
                 break;
@@ -144,7 +138,6 @@ int main(void)
             }
         }
         HAL_Delay(1000);
-
     }
 }
 
