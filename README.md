@@ -1,3 +1,3 @@
-This is my labotary at Microprocessor-Microcontroller 
+This is my labotary at Microprocessor-Microcontroller course 
 
-In Lab1
+
